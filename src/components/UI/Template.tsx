@@ -10,7 +10,7 @@ export const Template: FC<TTemplate> = (props) => {
   const [theme, setTheme] = useState("dark");
   return (
     <div data-theme={theme} className="w-full transition-colors">
-      <section className="h-screen w-full mx-auto max-w-[1800px] border min-h-screen flex gap-4 p-4">
+      <section className="h-screen w-full mx-auto max-w-[1800px] border min-h-screen flex gap-4 p-4 prose">
         <article className="border p-4 rounded-lg w-full max-w-[280px]">
           iaa
         </article>
