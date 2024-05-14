@@ -10,13 +10,13 @@ export const Template: FC<TTemplate> = (props) => {
   const [theme, setTheme] = useState("dark");
   return (
     <div data-theme={theme} className="w-full transition-colors">
-      <section className="h-screen w-full mx-auto max-w-[1800px] border min-h-screen flex gap-4 p-4 prose">
-        <article className="border p-4 rounded-lg w-full max-w-[280px]">
-          iaa
+      <section className="h-screen w-full mx-auto max-w-[1800px] min-h-screen flex gap-4 p-4">
+        <article className="p-4 rounded-lg w-full max-w-[280px] bg-secondary text-color">
+          <p className="text-lg font-semibold">My pages</p>
         </article>
         <div className="flex flex-col gap-4 items-stretch w-full h-full">
-          <nav className="flex border w-full p-2 rounded-lg">
-            <label className="swap swap-rotate">
+          <nav className="flex justify-end w-full p-2 rounded-lg bg-secondary">
+            <label className="swap swap-rotate text-color">
               <input
                 type="checkbox"
                 className="theme-controller"

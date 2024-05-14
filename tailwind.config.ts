@@ -17,7 +17,30 @@ const config: Config = {
   },
   plugins: [require("@tailwindcss/typography"), require("daisyui")],
   daisyui: {
-    themes: ["light", "dark"],
+    themes: [
+      {
+        light: {
+          ...require("daisyui/src/theming/themes")["light"],
+          ".bg-secondary": {
+            "background-color": "#f3f3f3",
+          },
+          ".text-color": {
+            color: "#36bc97",
+          },
+        },
+      },
+      {
+        dark: {
+          ...require("daisyui/src/theming/themes")["dark"],
+          ".bg-secondary": {
+            "background-color": "#282d35",
+          },
+          ".text-color": {
+            color: "#38eab9",
+          },
+        },
+      },
+    ],
   },
 };
 export default config;
