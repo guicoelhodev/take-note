@@ -1,3 +1,4 @@
+import { Editor } from "@/components/UI/Editor";
 import { NextPage } from "next";
 import Link from "next/link";
 
@@ -35,6 +36,8 @@ const NotePage: NextPage<TNotePage> = (props) => {
       <Link className="btn" href={`/auth/${notePageId.pageId}_${newPageId}`}>
         Adicionar página filha
       </Link>
+
+      <Editor />
     </div>
   )
 }

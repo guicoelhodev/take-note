@@ -10,8 +10,10 @@ import TextAlign from '@tiptap/extension-text-align';
 
 import { Color } from '@tiptap/extension-color';
 import { Highlight } from '@tiptap/extension-highlight';
-import { useEditor } from '@tiptap/react';
+import { EditorContent, useEditor } from '@tiptap/react';
 import { useState } from 'react';
+import { FloatingMenu } from './FloatingMenu';
+import { BubbleMenu } from './BubbleMenu';
 
 const extensions = [
   StarterKit,
@@ -74,8 +76,15 @@ export const Editor = () => {
   })
 
   return (
-    <div>
-
+    <div className='border p-4'>
+      {
+        !editor ? <p>Carregando...</p>
+          : (
+            <EditorContent editor={editor} className='prose border max-w-[1080px] w-full p-4 mx-auto'>
+              <FloatingMenu editor={editor} />
+              <BubbleMenu editor={editor} />
+            </EditorContent>
+          )}
     </div>
   );
 };
