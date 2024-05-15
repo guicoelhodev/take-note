@@ -27,6 +27,10 @@ const config: Config = {
           ".text-color": {
             color: "#36bc97",
           },
+          ".editor-placeholder::before": {
+            color: "#36bc97",
+            content: "attr(data-placeholder)",
+          },
           primary: "#36bc97",
         },
       },
@@ -38,6 +42,10 @@ const config: Config = {
           },
           ".text-color": {
             color: "#38eab9",
+          },
+          ".editor-placeholder::before": {
+            color: "#38eab9",
+            content: "attr(data-placeholder)",
           },
           primary: "#38eab9",
         },

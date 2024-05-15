@@ -18,9 +18,8 @@ import { BubbleMenu } from './BubbleMenu';
 const extensions = [
   StarterKit,
   Placeholder.configure({
-    placeholder: 'Digite aqui ...',
-    emptyEditorClass: 'text-color',
-    considerAnyAsEmpty: true,
+    placeholder: 'Type here',
+    emptyEditorClass: 'editor-placeholder',
   }),
   Color,
   Highlight.configure({
