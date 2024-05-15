@@ -19,6 +19,8 @@ const extensions = [
   StarterKit,
   Placeholder.configure({
     placeholder: 'Digite aqui ...',
+    emptyEditorClass: 'text-color',
+    considerAnyAsEmpty: true,
   }),
   Color,
   Highlight.configure({
@@ -73,18 +75,24 @@ export const Editor = () => {
         }
       })();
     },
+    editorProps: {
+      attributes: {
+        class: 'prose bg-secondary rounded-md p-4 mx-auto min-h-96 !max-w-none mx-[4px] focus:outline-none',
+      }
+    }
   })
 
   return (
-    <div className='border p-4'>
+    <div className='flex-1 focus-within:outline-white'>
       {
-        !editor ? <p>Carregando...</p>
+        !editor ? <div className="skeleton w-full h-96"></div>
           : (
-            <EditorContent editor={editor} className='prose border max-w-[1080px] w-full p-4 mx-auto'>
+            <EditorContent editor={editor}>
               <FloatingMenu editor={editor} />
               <BubbleMenu editor={editor} />
             </EditorContent>
-          )}
-    </div>
+          )
+      }
+    </div >
   );
 };

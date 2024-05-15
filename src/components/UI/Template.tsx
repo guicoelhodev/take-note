@@ -10,11 +10,11 @@ export const Template: FC<TTemplate> = (props) => {
   const [theme, setTheme] = useState("dark");
   return (
     <div data-theme={theme} className="w-full transition-colors">
-      <section className="h-screen w-full mx-auto min-h-screen grid grid-cols-[280px,1fr] gap-4 p-4">
-        <article className="p-4 rounded-lg w-full bg-secondary text-color">
+      <section className="h-screen w-full mx-auto min-h-screen grid grid-cols-[280px,1fr] gap-4">
+        <article className="p-4 rounded-lg w-full bg-secondary text-color m-4">
           <p className="text-lg font-semibold">My pages</p>
         </article>
-        <div className="flex flex-col gap-4 items-stretch w-full">
+        <div className="flex flex-col gap-4 items-stretch w-full h-screen p-4">
           <nav className="flex justify-end w-full p-2 rounded-lg bg-secondary">
             <label className="swap swap-rotate text-color">
               <input
@@ -42,7 +42,7 @@ export const Template: FC<TTemplate> = (props) => {
             </label>
           </nav>
 
-          <main className="overflow-y-auto h-full w-full max-w-[1280px] mx-auto">
+          <main className="overflow-y-auto h-full  w-full max-w-[1280px] mx-auto">
             {props.children}
           </main>
         </div>

@@ -27,6 +27,7 @@ const config: Config = {
           ".text-color": {
             color: "#36bc97",
           },
+          primary: "#36bc97",
         },
       },
       {
@@ -38,6 +39,7 @@ const config: Config = {
           ".text-color": {
             color: "#38eab9",
           },
+          primary: "#38eab9",
         },
       },
     ],
