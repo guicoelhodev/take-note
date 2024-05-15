@@ -3,7 +3,7 @@ import { Time } from "@/components/page/Home/Time";
 export type TPageLink = { name: string; createdAt: string; href: string; }
 
 const pageContentMock: TPageLink[] = [
-  { name: "AWS - Quick Start", createdAt: "2024-05-15T08:00:00Z", href: "/" },
+  { name: "AWS - Quick Start", createdAt: "2024-05-15T08:00:00Z", href: "/4352" },
   { name: "React Basics", createdAt: "2024-05-14T10:30:00Z", href: "/" },
   { name: "Node.js Fundamentals", createdAt: "2024-05-13T14:45:00Z", href: "/" },
   { name: "JavaScript Best Practices", createdAt: "2024-05-12T17:20:00Z", href: "/" },

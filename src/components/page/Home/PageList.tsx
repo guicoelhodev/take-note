@@ -27,7 +27,7 @@ export const PageList: FC<TPageList> = (props) => {
 
         <SwiperSlide
           className='bg-secondary aspect-square w-40 h-40 p-2 rounded-md cursor-pointer flex'
-          onClick={() => router.push(page.href)}
+          onClick={() => router.push(`/auth/${page.name}`)}
           title={page.name}
         >
           <div className='flex flex-col h-full justify-between items-end'>
