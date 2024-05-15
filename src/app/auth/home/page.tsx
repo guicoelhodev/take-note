@@ -1,4 +1,5 @@
 import { PageList } from "@/components/page/Home";
+import { Time } from "@/components/page/Home/Time";
 export type TPageLink = { name: string; createdAt: string; href: string; }
 
 const pageContentMock: TPageLink[] = [
@@ -17,11 +18,15 @@ const pageContentMock: TPageLink[] = [
 ];
 
 export default function Home() {
+
   return (
     <div className='h-full flex flex-col p-4 gap-4'>
-      <article className="prose my-4">
-        <h1>Welcome back, Guilherme Coelho</h1>
-      </article>
+      <section className="my-4 flex justify-between items-center w-full">
+        <article className="prose">
+          <h1 className="w-full">Welcome back, Guilherme Coelho</h1>
+        </article>
+        <Time />
+      </section>
 
       <PageList list={pageContentMock} />
     </div>
