@@ -14,7 +14,18 @@ type PageId = {
   pageId: string;
 };
 
-const NotePage: NextPage<TNotePage> = (props) => {
+
+const fetchTestApi = async () => {
+  return await fetch('http://localhost:3000/api', {
+    headers: { Accept: "application/json", method: "GET" }
+  }).then(res => res.json())
+}
+
+const NotePage: NextPage<TNotePage> = async (props) => {
+
+  const response = await fetchTestApi();
+
+  console.log('response', response);
 
   const getPageId = (): PageId => {
     const ids = props.params.NotePage.split('_')
