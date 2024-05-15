@@ -19,7 +19,7 @@ const pageContentMock: TPageLink[] = [
 export default function Home() {
   return (
     <div className='h-full flex flex-col p-4 gap-4'>
-      <article className="prose">
+      <article className="prose my-4">
         <h1>Welcome back, Guilherme Coelho</h1>
       </article>
 
